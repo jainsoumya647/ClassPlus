@@ -1,0 +1,882 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF4B8B702411745E003AB263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B6F2411745E003AB263 /* AppDelegate.swift */; };
+		EF4B8B722411745E003AB263 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B712411745E003AB263 /* SceneDelegate.swift */; };
+		EF4B8B772411745E003AB263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8B752411745E003AB263 /* Main.storyboard */; };
+		EF4B8B7A2411745E003AB263 /* ClassPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B782411745E003AB263 /* ClassPlus.xcdatamodeld */; };
+		EF4B8B7C24117462003AB263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8B7B24117462003AB263 /* Assets.xcassets */; };
+		EF4B8B7F24117462003AB263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8B7D24117462003AB263 /* LaunchScreen.storyboard */; };
+		EF4B8B8A24117463003AB263 /* ClassPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B8924117463003AB263 /* ClassPlusTests.swift */; };
+		EF4B8B9524117463003AB263 /* ClassPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B9424117463003AB263 /* ClassPlusUITests.swift */; };
+		EF4B8BB524117BEF003AB263 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BA924117BEF003AB263 /* Environment.swift */; };
+		EF4B8BB624117BEF003AB263 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BAB24117BEF003AB263 /* ParameterEncoding.swift */; };
+		EF4B8BB724117BEF003AB263 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BAC24117BEF003AB263 /* URLParameterEncoder.swift */; };
+		EF4B8BB824117BEF003AB263 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BAD24117BEF003AB263 /* JSONParameterEncoder.swift */; };
+		EF4B8BB924117BEF003AB263 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BAF24117BEF003AB263 /* HTTPTask.swift */; };
+		EF4B8BBA24117BEF003AB263 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BB024117BEF003AB263 /* HTTPMethod.swift */; };
+		EF4B8BBB24117BEF003AB263 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BB124117BEF003AB263 /* EndPointType.swift */; };
+		EF4B8BBC24117BEF003AB263 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BB324117BEF003AB263 /* NetworkService.swift */; };
+		EF4B8BBD24117BEF003AB263 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BB424117BEF003AB263 /* NetworkLogger.swift */; };
+		EF4B8BC024117E9D003AB263 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BBF24117E9D003AB263 /* UserService.swift */; };
+		EF4B8BC224117EE3003AB263 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BC124117EE3003AB263 /* UserModel.swift */; };
+		EF4B8BD424118665003AB263 /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BC524118665003AB263 /* ReusableCollectionViewCell.swift */; };
+		EF4B8BD524118665003AB263 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BC624118665003AB263 /* ActivityIndicator.swift */; };
+		EF4B8BD624118665003AB263 /* ReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BC724118665003AB263 /* ReusableTableViewCell.swift */; };
+		EF4B8BD724118665003AB263 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BC924118665003AB263 /* Constants.swift */; };
+		EF4B8BD824118665003AB263 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BCB24118665003AB263 /* UIApplication+Extension.swift */; };
+		EF4B8BD924118665003AB263 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BCC24118665003AB263 /* UIColor+Extension.swift */; };
+		EF4B8BDA24118665003AB263 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BCD24118665003AB263 /* UILabel+Extension.swift */; };
+		EF4B8BDB24118665003AB263 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BCE24118665003AB263 /* UIView+Extension.swift */; };
+		EF4B8BDC24118666003AB263 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BCF24118665003AB263 /* UIImage+Extension.swift */; };
+		EF4B8BDD24118666003AB263 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BD024118665003AB263 /* UIViewController+Extension.swift */; };
+		EF4B8BDE24118666003AB263 /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BD124118665003AB263 /* WKWebView+Extension.swift */; };
+		EF4B8BDF24118666003AB263 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BD224118665003AB263 /* CGFloat+Extension.swift */; };
+		EF4B8BE024118666003AB263 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BD324118665003AB263 /* Utility.swift */; };
+		EF4B8BE22411877A003AB263 /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BE12411877A003AB263 /* UsersListViewController.swift */; };
+		EF4B8BE424118888003AB263 /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BE324118888003AB263 /* UsersListViewModel.swift */; };
+		EF4B8BE824118D3F003AB263 /* UsersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BE624118D3F003AB263 /* UsersCell.swift */; };
+		EF4B8BE924118D3F003AB263 /* UsersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8BE724118D3F003AB263 /* UsersCell.xib */; };
+		EF4B8BEB241190B8003AB263 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BEA241190B8003AB263 /* UIImageView+Extension.swift */; };
+		EF4B8BEF2411A4C4003AB263 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BEE2411A4C4003AB263 /* AddUserViewController.swift */; };
+		EF4B8BF32411A55C003AB263 /* AddUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF12411A55C003AB263 /* AddUserCell.swift */; };
+		EF4B8BF42411A55C003AB263 /* AddUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8BF22411A55C003AB263 /* AddUserCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF4B8B8624117463003AB263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4B8B642411745E003AB263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4B8B6B2411745E003AB263;
+			remoteInfo = ClassPlus;
+		};
+		EF4B8B9124117463003AB263 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF4B8B642411745E003AB263 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF4B8B6B2411745E003AB263;
+			remoteInfo = ClassPlus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF4B8B6C2411745E003AB263 /* ClassPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4B8B6F2411745E003AB263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ClassPlus/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		EF4B8B712411745E003AB263 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
+		EF4B8B762411745E003AB263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF4B8B792411745E003AB263 /* ClassPlus.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClassPlus.xcdatamodel; sourceTree = "<group>"; };
+		EF4B8B7B24117462003AB263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF4B8B7E24117462003AB263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF4B8B8024117462003AB263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4B8B8524117463003AB263 /* ClassPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4B8B8924117463003AB263 /* ClassPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPlusTests.swift; sourceTree = "<group>"; };
+		EF4B8B8B24117463003AB263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4B8B9024117463003AB263 /* ClassPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4B8B9424117463003AB263 /* ClassPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPlusUITests.swift; sourceTree = "<group>"; };
+		EF4B8B9624117463003AB263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF4B8BA924117BEF003AB263 /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		EF4B8BAB24117BEF003AB263 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		EF4B8BAC24117BEF003AB263 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		EF4B8BAD24117BEF003AB263 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		EF4B8BAF24117BEF003AB263 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		EF4B8BB024117BEF003AB263 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		EF4B8BB124117BEF003AB263 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		EF4B8BB324117BEF003AB263 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EF4B8BB424117BEF003AB263 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		EF4B8BBF24117E9D003AB263 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		EF4B8BC124117EE3003AB263 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		EF4B8BC524118665003AB263 /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF4B8BC624118665003AB263 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		EF4B8BC724118665003AB263 /* ReusableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableTableViewCell.swift; sourceTree = "<group>"; };
+		EF4B8BC924118665003AB263 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF4B8BCB24118665003AB263 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BCC24118665003AB263 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BCD24118665003AB263 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BCE24118665003AB263 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BCF24118665003AB263 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BD024118665003AB263 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BD124118665003AB263 /* WKWebView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BD224118665003AB263 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BD324118665003AB263 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		EF4B8BE12411877A003AB263 /* UsersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
+		EF4B8BE324118888003AB263 /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
+		EF4B8BE624118D3F003AB263 /* UsersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCell.swift; sourceTree = "<group>"; };
+		EF4B8BE724118D3F003AB263 /* UsersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersCell.xib; sourceTree = "<group>"; };
+		EF4B8BEA241190B8003AB263 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		EF4B8BEE2411A4C4003AB263 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		EF4B8BF12411A55C003AB263 /* AddUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCell.swift; sourceTree = "<group>"; };
+		EF4B8BF22411A55C003AB263 /* AddUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF4B8B692411745E003AB263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4B8B8224117463003AB263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4B8B8D24117463003AB263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF4B8B632411745E003AB263 = {
+			isa = PBXGroup;
+			children = (
+				EF4B8B6E2411745E003AB263 /* ClassPlus */,
+				EF4B8B8824117463003AB263 /* ClassPlusTests */,
+				EF4B8B9324117463003AB263 /* ClassPlusUITests */,
+				EF4B8B6D2411745E003AB263 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF4B8B6D2411745E003AB263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8B6C2411745E003AB263 /* ClassPlus.app */,
+				EF4B8B8524117463003AB263 /* ClassPlusTests.xctest */,
+				EF4B8B9024117463003AB263 /* ClassPlusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF4B8B6E2411745E003AB263 /* ClassPlus */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BC324118665003AB263 /* Helper */,
+				EF4B8BBE24117E7A003AB263 /* ServiceLayer */,
+				EF4B8BA824117BEF003AB263 /* Networking */,
+				EF4B8BA324117527003AB263 /* AppGroup */,
+				EF4B8BA224117512003AB263 /* AppDelegate */,
+				EF4B8B752411745E003AB263 /* Main.storyboard */,
+				EF4B8B7B24117462003AB263 /* Assets.xcassets */,
+				EF4B8B7D24117462003AB263 /* LaunchScreen.storyboard */,
+				EF4B8B8024117462003AB263 /* Info.plist */,
+				EF4B8B782411745E003AB263 /* ClassPlus.xcdatamodeld */,
+			);
+			path = ClassPlus;
+			sourceTree = "<group>";
+		};
+		EF4B8B8824117463003AB263 /* ClassPlusTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8B8924117463003AB263 /* ClassPlusTests.swift */,
+				EF4B8B8B24117463003AB263 /* Info.plist */,
+			);
+			path = ClassPlusTests;
+			sourceTree = "<group>";
+		};
+		EF4B8B9324117463003AB263 /* ClassPlusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8B9424117463003AB263 /* ClassPlusUITests.swift */,
+				EF4B8B9624117463003AB263 /* Info.plist */,
+			);
+			path = ClassPlusUITests;
+			sourceTree = "<group>";
+		};
+		EF4B8BA224117512003AB263 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8B6F2411745E003AB263 /* AppDelegate.swift */,
+				EF4B8B712411745E003AB263 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EF4B8BA324117527003AB263 /* AppGroup */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BEC2411A49D003AB263 /* AddUser */,
+				EF4B8BA4241177E8003AB263 /* UserList */,
+			);
+			path = AppGroup;
+			sourceTree = "<group>";
+		};
+		EF4B8BA4241177E8003AB263 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BA724117B8F003AB263 /* Model */,
+				EF4B8BA624117B86003AB263 /* ViewModel */,
+				EF4B8BA524117B80003AB263 /* View */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		EF4B8BA524117B80003AB263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BE524118AEA003AB263 /* Cell */,
+				EF4B8BE12411877A003AB263 /* UsersListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF4B8BA624117B86003AB263 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BE324118888003AB263 /* UsersListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF4B8BA724117B8F003AB263 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BC124117EE3003AB263 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF4B8BA824117BEF003AB263 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BAA24117BEF003AB263 /* Encoding */,
+				EF4B8BAE24117BEF003AB263 /* Endpoint */,
+				EF4B8BB224117BEF003AB263 /* Service */,
+				EF4B8BA924117BEF003AB263 /* Environment.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EF4B8BAA24117BEF003AB263 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BAB24117BEF003AB263 /* ParameterEncoding.swift */,
+				EF4B8BAC24117BEF003AB263 /* URLParameterEncoder.swift */,
+				EF4B8BAD24117BEF003AB263 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		EF4B8BAE24117BEF003AB263 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BAF24117BEF003AB263 /* HTTPTask.swift */,
+				EF4B8BB024117BEF003AB263 /* HTTPMethod.swift */,
+				EF4B8BB124117BEF003AB263 /* EndPointType.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		EF4B8BB224117BEF003AB263 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BB324117BEF003AB263 /* NetworkService.swift */,
+				EF4B8BB424117BEF003AB263 /* NetworkLogger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EF4B8BBE24117E7A003AB263 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BBF24117E9D003AB263 /* UserService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		EF4B8BC324118665003AB263 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BC424118665003AB263 /* CommonClass */,
+				EF4B8BC824118665003AB263 /* Constants */,
+				EF4B8BCA24118665003AB263 /* Extensions */,
+				EF4B8BD324118665003AB263 /* Utility.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EF4B8BC424118665003AB263 /* CommonClass */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BC524118665003AB263 /* ReusableCollectionViewCell.swift */,
+				EF4B8BC624118665003AB263 /* ActivityIndicator.swift */,
+				EF4B8BC724118665003AB263 /* ReusableTableViewCell.swift */,
+			);
+			path = CommonClass;
+			sourceTree = "<group>";
+		};
+		EF4B8BC824118665003AB263 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BC924118665003AB263 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EF4B8BCA24118665003AB263 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BCB24118665003AB263 /* UIApplication+Extension.swift */,
+				EF4B8BCC24118665003AB263 /* UIColor+Extension.swift */,
+				EF4B8BCD24118665003AB263 /* UILabel+Extension.swift */,
+				EF4B8BCE24118665003AB263 /* UIView+Extension.swift */,
+				EF4B8BCF24118665003AB263 /* UIImage+Extension.swift */,
+				EF4B8BD024118665003AB263 /* UIViewController+Extension.swift */,
+				EF4B8BD124118665003AB263 /* WKWebView+Extension.swift */,
+				EF4B8BD224118665003AB263 /* CGFloat+Extension.swift */,
+				EF4B8BEA241190B8003AB263 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF4B8BE524118AEA003AB263 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BE624118D3F003AB263 /* UsersCell.swift */,
+				EF4B8BE724118D3F003AB263 /* UsersCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF4B8BEC2411A49D003AB263 /* AddUser */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BED2411A4A6003AB263 /* View */,
+			);
+			path = AddUser;
+			sourceTree = "<group>";
+		};
+		EF4B8BED2411A4A6003AB263 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BF02411A525003AB263 /* Cell */,
+				EF4B8BEE2411A4C4003AB263 /* AddUserViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF4B8BF02411A525003AB263 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BF12411A55C003AB263 /* AddUserCell.swift */,
+				EF4B8BF22411A55C003AB263 /* AddUserCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF4B8B6B2411745E003AB263 /* ClassPlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4B8B9924117463003AB263 /* Build configuration list for PBXNativeTarget "ClassPlus" */;
+			buildPhases = (
+				EF4B8B682411745E003AB263 /* Sources */,
+				EF4B8B692411745E003AB263 /* Frameworks */,
+				EF4B8B6A2411745E003AB263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClassPlus;
+			productName = ClassPlus;
+			productReference = EF4B8B6C2411745E003AB263 /* ClassPlus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF4B8B8424117463003AB263 /* ClassPlusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4B8B9C24117463003AB263 /* Build configuration list for PBXNativeTarget "ClassPlusTests" */;
+			buildPhases = (
+				EF4B8B8124117463003AB263 /* Sources */,
+				EF4B8B8224117463003AB263 /* Frameworks */,
+				EF4B8B8324117463003AB263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF4B8B8724117463003AB263 /* PBXTargetDependency */,
+			);
+			name = ClassPlusTests;
+			productName = ClassPlusTests;
+			productReference = EF4B8B8524117463003AB263 /* ClassPlusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF4B8B8F24117463003AB263 /* ClassPlusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF4B8B9F24117463003AB263 /* Build configuration list for PBXNativeTarget "ClassPlusUITests" */;
+			buildPhases = (
+				EF4B8B8C24117463003AB263 /* Sources */,
+				EF4B8B8D24117463003AB263 /* Frameworks */,
+				EF4B8B8E24117463003AB263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF4B8B9224117463003AB263 /* PBXTargetDependency */,
+			);
+			name = ClassPlusUITests;
+			productName = ClassPlusUITests;
+			productReference = EF4B8B9024117463003AB263 /* ClassPlusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF4B8B642411745E003AB263 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Soumya Jain";
+				TargetAttributes = {
+					EF4B8B6B2411745E003AB263 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					EF4B8B8424117463003AB263 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EF4B8B6B2411745E003AB263;
+					};
+					EF4B8B8F24117463003AB263 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EF4B8B6B2411745E003AB263;
+					};
+				};
+			};
+			buildConfigurationList = EF4B8B672411745E003AB263 /* Build configuration list for PBXProject "ClassPlus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF4B8B632411745E003AB263;
+			productRefGroup = EF4B8B6D2411745E003AB263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF4B8B6B2411745E003AB263 /* ClassPlus */,
+				EF4B8B8424117463003AB263 /* ClassPlusTests */,
+				EF4B8B8F24117463003AB263 /* ClassPlusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF4B8B6A2411745E003AB263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4B8BE924118D3F003AB263 /* UsersCell.xib in Resources */,
+				EF4B8B7F24117462003AB263 /* LaunchScreen.storyboard in Resources */,
+				EF4B8B7C24117462003AB263 /* Assets.xcassets in Resources */,
+				EF4B8B772411745E003AB263 /* Main.storyboard in Resources */,
+				EF4B8BF42411A55C003AB263 /* AddUserCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4B8B8324117463003AB263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4B8B8E24117463003AB263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF4B8B682411745E003AB263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4B8BE024118666003AB263 /* Utility.swift in Sources */,
+				EF4B8BDA24118665003AB263 /* UILabel+Extension.swift in Sources */,
+				EF4B8BD924118665003AB263 /* UIColor+Extension.swift in Sources */,
+				EF4B8BD624118665003AB263 /* ReusableTableViewCell.swift in Sources */,
+				EF4B8BE824118D3F003AB263 /* UsersCell.swift in Sources */,
+				EF4B8BDC24118666003AB263 /* UIImage+Extension.swift in Sources */,
+				EF4B8BD724118665003AB263 /* Constants.swift in Sources */,
+				EF4B8BC024117E9D003AB263 /* UserService.swift in Sources */,
+				EF4B8BB824117BEF003AB263 /* JSONParameterEncoder.swift in Sources */,
+				EF4B8BB624117BEF003AB263 /* ParameterEncoding.swift in Sources */,
+				EF4B8B7A2411745E003AB263 /* ClassPlus.xcdatamodeld in Sources */,
+				EF4B8BB924117BEF003AB263 /* HTTPTask.swift in Sources */,
+				EF4B8BF32411A55C003AB263 /* AddUserCell.swift in Sources */,
+				EF4B8BE424118888003AB263 /* UsersListViewModel.swift in Sources */,
+				EF4B8BDE24118666003AB263 /* WKWebView+Extension.swift in Sources */,
+				EF4B8BDB24118665003AB263 /* UIView+Extension.swift in Sources */,
+				EF4B8BBD24117BEF003AB263 /* NetworkLogger.swift in Sources */,
+				EF4B8BDD24118666003AB263 /* UIViewController+Extension.swift in Sources */,
+				EF4B8BBB24117BEF003AB263 /* EndPointType.swift in Sources */,
+				EF4B8B702411745E003AB263 /* AppDelegate.swift in Sources */,
+				EF4B8BE22411877A003AB263 /* UsersListViewController.swift in Sources */,
+				EF4B8BB724117BEF003AB263 /* URLParameterEncoder.swift in Sources */,
+				EF4B8BD424118665003AB263 /* ReusableCollectionViewCell.swift in Sources */,
+				EF4B8B722411745E003AB263 /* SceneDelegate.swift in Sources */,
+				EF4B8BEB241190B8003AB263 /* UIImageView+Extension.swift in Sources */,
+				EF4B8BBA24117BEF003AB263 /* HTTPMethod.swift in Sources */,
+				EF4B8BBC24117BEF003AB263 /* NetworkService.swift in Sources */,
+				EF4B8BC224117EE3003AB263 /* UserModel.swift in Sources */,
+				EF4B8BDF24118666003AB263 /* CGFloat+Extension.swift in Sources */,
+				EF4B8BB524117BEF003AB263 /* Environment.swift in Sources */,
+				EF4B8BEF2411A4C4003AB263 /* AddUserViewController.swift in Sources */,
+				EF4B8BD824118665003AB263 /* UIApplication+Extension.swift in Sources */,
+				EF4B8BD524118665003AB263 /* ActivityIndicator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4B8B8124117463003AB263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4B8B8A24117463003AB263 /* ClassPlusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF4B8B8C24117463003AB263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF4B8B9524117463003AB263 /* ClassPlusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF4B8B8724117463003AB263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4B8B6B2411745E003AB263 /* ClassPlus */;
+			targetProxy = EF4B8B8624117463003AB263 /* PBXContainerItemProxy */;
+		};
+		EF4B8B9224117463003AB263 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF4B8B6B2411745E003AB263 /* ClassPlus */;
+			targetProxy = EF4B8B9124117463003AB263 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF4B8B752411745E003AB263 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF4B8B762411745E003AB263 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF4B8B7D24117462003AB263 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF4B8B7E24117462003AB263 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF4B8B9724117463003AB263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF4B8B9824117463003AB263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF4B8B9A24117463003AB263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClassPlus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.ClassPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF4B8B9B24117463003AB263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClassPlus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.ClassPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF4B8B9D24117463003AB263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClassPlusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.ClassPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassPlus.app/ClassPlus";
+			};
+			name = Debug;
+		};
+		EF4B8B9E24117463003AB263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClassPlusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.ClassPlusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClassPlus.app/ClassPlus";
+			};
+			name = Release;
+		};
+		EF4B8BA024117463003AB263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClassPlusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.ClassPlusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClassPlus;
+			};
+			name = Debug;
+		};
+		EF4B8BA124117463003AB263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ClassPlusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.ClassPlusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClassPlus;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF4B8B672411745E003AB263 /* Build configuration list for PBXProject "ClassPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4B8B9724117463003AB263 /* Debug */,
+				EF4B8B9824117463003AB263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4B8B9924117463003AB263 /* Build configuration list for PBXNativeTarget "ClassPlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4B8B9A24117463003AB263 /* Debug */,
+				EF4B8B9B24117463003AB263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4B8B9C24117463003AB263 /* Build configuration list for PBXNativeTarget "ClassPlusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4B8B9D24117463003AB263 /* Debug */,
+				EF4B8B9E24117463003AB263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF4B8B9F24117463003AB263 /* Build configuration list for PBXNativeTarget "ClassPlusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF4B8BA024117463003AB263 /* Debug */,
+				EF4B8BA124117463003AB263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF4B8B782411745E003AB263 /* ClassPlus.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF4B8B792411745E003AB263 /* ClassPlus.xcdatamodel */,
+			);
+			currentVersion = EF4B8B792411745E003AB263 /* ClassPlus.xcdatamodel */;
+			path = ClassPlus.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF4B8B642411745E003AB263 /* Project object */;
+}
