@@ -13,7 +13,7 @@ enum Storyboard: String {
 }
 
 enum Controller: String {
-    case repoDetailsViewController = "RepoDetailsViewController"
+    case addUserViewController = "AddUserViewController"
 }
 
 struct Height {
@@ -51,6 +51,13 @@ enum Font: String {
     case semiBold = "Montserrat-SemiBold"
     case bold = "Montserrat-Bold"
     case extraBold = "Montserrat-ExtraBold"
+}
+
+struct Text {
+    static let firstName = "First Name"
+    static let lastName = "Last Name"
+    static let email = "Email"
+    static let mobileNo = "Mobile Number"
 }
 
 struct ErrorMessage {

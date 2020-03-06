@@ -43,6 +43,9 @@ class UsersListViewController: UIViewController {
     }
     
     @IBAction func addAction(_ sender: Any) {
+        if let vc = AddUserViewController.getController(user: nil) {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }

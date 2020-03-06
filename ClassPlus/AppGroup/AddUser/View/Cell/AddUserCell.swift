@@ -12,6 +12,7 @@ enum Sections {
     case firstName
     case lastName
     case email
+    case phone
 }
 
 protocol AddUserCellDelegate: class {
@@ -20,7 +21,7 @@ protocol AddUserCellDelegate: class {
 
 class AddUserCell: ReusableTableViewCell {
 
-    @IBOutlet weak var palceholderLabel: UILabel!
+    @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var inputTextField: UITextField!
     
     var type: Sections!
@@ -35,8 +36,11 @@ class AddUserCell: ReusableTableViewCell {
         self.inputTextField.delegate = self
     }
     
-    func configureCell(type: Sections) {
+    func configureCell(type: Sections, text: String, placeholder: String) {
         self.type = type
+        self.inputTextField.text = text
+        self.inputTextField.placeholder = placeholder
+        self.placeholderLabel.text = placeholder
     }
     
 }
