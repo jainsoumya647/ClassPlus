@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UsersListViewModel  {
+class UsersListViewModel {
     var reloadData: (() -> Void)?
     private var usersResult: UserResults?
     private var usersArray: [User]? {
@@ -18,12 +18,25 @@ class UsersListViewModel  {
     }
     private var currentPage = 0
     private var isRequestInProgress = false
+    private let isFetchedFromDataBase: Bool
     
     init() {
-        self.fetchNextPageUsers()
+        let users = DataBaseManger.loadUsersFromDb()
+        if users.count > 0 {
+            print("Fetched from DB with count: \(users.count)")
+            self.isFetchedFromDataBase = true
+            self.usersArray = users
+        } else {
+            self.isFetchedFromDataBase = false
+            self.fetchNextPageUsers()
+        }
     }
     
     func fetchNextPageUsers() {
+        
+        guard self.isFetchedFromDataBase == false else {
+            return
+        }
         
         guard self.isRequestInProgress == false else {
             return

@@ -21,17 +21,17 @@ class DataBaseManger: NSObject {
         completionBlock()
     }
     
-   class func loadCarsFromDb() -> [User] {
+   class func loadUsersFromDb() -> [User] {
         let context = CoreDataStack.persistentContainer.viewContext
         var viewModelArray = [User]()
         do {
-            let cars : [User] = try context.fetch(User.fetchUserRequest())
-            viewModelArray = cars
+            let userFromDB : [UserCoreData] = try context.fetch(UserCoreData.fetchRequest())
+            for user in userFromDB {
+                viewModelArray.append(User(userDB: user))
+            }
         } catch {
             print("Error fetching data from CoreData")
         }
         return viewModelArray
     }
-//
-    //Add other methods when needed
 }

@@ -20,7 +20,7 @@ struct UserResults: Codable {
     }
 }
 
-class User: NSManagedObject, Codable {
+struct User: Codable {
     var id: Int?
     var email: String?
     var firstName: String?
@@ -37,17 +37,37 @@ class User: NSManagedObject, Codable {
         case mobile = "mobile"
     }
     
-//    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
-//
-//    }
+    init() { }
     
-    
-    required init(from decoder: Decoder) throws {
-        super.init(context: CoreDataStack.persistentContainer.viewContext)
+    init(userDB: UserCoreData) {
+        self.email = userDB.email
+        self.avatar = userDB.avatar
+        self.firstName = userDB.firstName
+        self.lastName = userDB.lastName
+        self.mobile = userDB.mobile
     }
     
+//    required convenience init(from decoder: Decoder) throws {
+//        let context = CoreDataStack.persistentContainer.viewContext
+//        guard let entity = NSEntityDescription.entity(forEntityName: "UserCoreData", in: context) else {
+//            fatalError("Entity not found")
+//        }
+//        self.init(entity: entity, insertInto: context)
+//        self.init()
+//        do {
+//            let values = try decoder.container(keyedBy: CodingKeys.self)
+//            self.email = try? values.decode(String?.self, forKey: .email)
+//            self.firstName = try? values.decode(String?.self, forKey: .firstName)
+//            self.lastName = try? values.decode(String?.self, forKey: .lastName)
+//            self.avatar = try? values.decode(String?.self, forKey: .avatar)
+//            self.mobile = try? values.decode(String?.self, forKey: .mobile)
+//        } catch {
+//            print("Failed to load")
+//        }
+//    }
+    
     func saveUser(with context: NSManagedObjectContext) {
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+        let entity = NSEntityDescription.entity(forEntityName: "UserCoreData", in: context)
         let newUser = NSManagedObject(entity: entity!, insertInto: context)
         newUser.setValue(self.email, forKey: "email")
         newUser.setValue(self.firstName, forKey: "firstName")
@@ -56,9 +76,9 @@ class User: NSManagedObject, Codable {
         newUser.setValue(self.mobile, forKey: "mobile")
     }
     
-    class func fetchUserRequest() -> NSFetchRequest<User> {
-        return NSFetchRequest<User>(entityName: "User")
-    }
+//    class func fetchUserRequest() -> NSFetchRequest<User> {
+//        return NSFetchRequest<User>(entityName: "UserCoreData")
+//    }
     
     func getImageURLString() -> String {
         return self.avatar ?? ""
