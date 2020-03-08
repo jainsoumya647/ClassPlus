@@ -51,6 +51,8 @@
 		EF4B8BF42411A55C003AB263 /* AddUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8BF22411A55C003AB263 /* AddUserCell.xib */; };
 		EF4B8BF72414F96C003AB263 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */; };
 		EF4B8BF92414FA79003AB263 /* UsersDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */; };
+		EFE493F0241546CA00A8B860 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493EE241546CA00A8B860 /* User+CoreDataClass.swift */; };
+		EFE493F1241546CA00A8B860 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493EF241546CA00A8B860 /* User+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		EF4B8BF22411A55C003AB263 /* AddUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserCell.xib; sourceTree = "<group>"; };
 		EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDatabaseManager.swift; sourceTree = "<group>"; };
+		EFE493EE241546CA00A8B860 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EFE493EF241546CA00A8B860 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +402,8 @@
 		EF4B8BF52414F941003AB263 /* DataBaseManager */ = {
 			isa = PBXGroup;
 			children = (
+				EFE493EE241546CA00A8B860 /* User+CoreDataClass.swift */,
+				EFE493EF241546CA00A8B860 /* User+CoreDataProperties.swift */,
 				EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */,
 				EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */,
 			);
@@ -559,6 +565,8 @@
 				EF4B8BDB24118665003AB263 /* UIView+Extension.swift in Sources */,
 				EF4B8BBD24117BEF003AB263 /* NetworkLogger.swift in Sources */,
 				EF4B8BDD24118666003AB263 /* UIViewController+Extension.swift in Sources */,
+				EFE493F0241546CA00A8B860 /* User+CoreDataClass.swift in Sources */,
+				EFE493F1241546CA00A8B860 /* User+CoreDataProperties.swift in Sources */,
 				EF4B8BBB24117BEF003AB263 /* EndPointType.swift in Sources */,
 				EF4B8B702411745E003AB263 /* AppDelegate.swift in Sources */,
 				EF4B8BE22411877A003AB263 /* UsersListViewController.swift in Sources */,

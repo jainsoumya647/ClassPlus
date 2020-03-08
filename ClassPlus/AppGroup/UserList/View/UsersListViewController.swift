@@ -85,7 +85,7 @@ extension UsersListViewController: UsersCellDelegate {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let updateAction = UIAlertAction(title: "Update User", style: .default, handler: { (alert: UIAlertAction!) -> Void in
-            self.gotoAddUserVC(user: self.viewModel.getUser(onIndex: index), index: index)
+            self.gotoAddUserVC(user: self.viewModel.getUser(onIndex: index)?.getClonedProperty(), index: index)
         })
 
         let deleteAction = UIAlertAction(title: "Delete User", style: .destructive, handler: { (alert: UIAlertAction!) -> Void in

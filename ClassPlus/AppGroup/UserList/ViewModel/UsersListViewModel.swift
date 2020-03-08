@@ -56,14 +56,9 @@ class UsersListViewModel {
             self.isRequestInProgress = false
             self.usersResult = usersResult
             if self.usersArray == nil {
-                if let usersArray = usersResult.users {
-                    DataBaseManger.saveUsersToDb(users: usersArray) {}
-                }
                 self.usersArray = usersResult.users
             } else if let usersArray = usersResult.users {
-                DataBaseManger.saveUsersToDb(users: usersArray) {
-                    self.usersArray?.append(contentsOf: usersArray)
-                }
+                self.usersArray?.append(contentsOf: usersArray)
             }
             
         }
@@ -71,13 +66,16 @@ class UsersListViewModel {
     
     func addUserToTop(user: User) {
         self.usersArray?.insert(user, at: 0)
+        user.saveUserToDatabase()
     }
     
     func updateUser(on index: Int, user: User) {
-        self.usersArray?[index] = user
+        self.usersArray?[index].updateCurrentUser(with: user)
+        self.reloadData?()
     }
     
     func removeUser(from index: Int) {
+        self.usersArray?[index].deleteUserFromDatabase()
         self.usersArray?.remove(at: index)
     }
     

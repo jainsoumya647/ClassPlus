@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
-    <entity name="UserCoreData" representedClassName="UserCoreData" syncable="YES" codeGenerationType="class">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="avatar" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
@@ -8,6 +8,6 @@
         <attribute name="mobile" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="UserCoreData" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>
