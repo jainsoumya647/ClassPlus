@@ -8,13 +8,19 @@
 
 import UIKit
 
+protocol AddUserVCDelegate: class {
+    func addUser(user: User)
+    func updateUser(on index: Int, user: User)
+}
+
 class AddUserViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
 
-    var viewModel: AddUserViewModel!
-
+    private var viewModel: AddUserViewModel!
+    weak var delegate: AddUserVCDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureViews()
@@ -27,8 +33,8 @@ class AddUserViewController: UIViewController {
         }
     }
 
-    private func initializeData(user: User?) {
-        self.viewModel = AddUserViewModel(user: user ?? User())
+    private func initializeData(user: User?, index: Int?) {
+        self.viewModel = AddUserViewModel(user: user ?? User(), isNewUser: user == nil, index: index ?? 0)
     }
 
     private func configureViews() {
@@ -42,12 +48,19 @@ class AddUserViewController: UIViewController {
     }
 
     @IBAction func saveAction(_ sender: Any) {
+        print(self.viewModel.getUserObject())
+        if self.viewModel.isNewUser {
+            self.delegate?.addUser(user: self.viewModel.getUserObject())
+        } else {
+            self.delegate?.updateUser(on: self.viewModel.index, user: self.viewModel.getUserObject())
+        }
         
+        self.navigationController?.popViewController(animated: true)
     }
 
-    class func getController(user: User?) -> AddUserViewController? {
+    class func getController(user: User?, index: Int?) -> AddUserViewController? {
         let viewController = UIViewController.initalizeMyViewController(identifier: .addUserViewController, storyboard: .main) as? AddUserViewController
-        viewController?.initializeData(user: user)
+        viewController?.initializeData(user: user, index: index)
         return viewController
     }
 }

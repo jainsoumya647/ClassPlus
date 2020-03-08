@@ -49,6 +49,8 @@
 		EF4B8BEF2411A4C4003AB263 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BEE2411A4C4003AB263 /* AddUserViewController.swift */; };
 		EF4B8BF32411A55C003AB263 /* AddUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF12411A55C003AB263 /* AddUserCell.swift */; };
 		EF4B8BF42411A55C003AB263 /* AddUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8BF22411A55C003AB263 /* AddUserCell.xib */; };
+		EF4B8BF72414F96C003AB263 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */; };
+		EF4B8BF92414FA79003AB263 /* UsersDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		EF4B8BEE2411A4C4003AB263 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		EF4B8BF12411A55C003AB263 /* AddUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCell.swift; sourceTree = "<group>"; };
 		EF4B8BF22411A55C003AB263 /* AddUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserCell.xib; sourceTree = "<group>"; };
+		EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,7 @@
 		EF4B8B6E2411745E003AB263 /* ClassPlus */ = {
 			isa = PBXGroup;
 			children = (
+				EF4B8BF52414F941003AB263 /* DataBaseManager */,
 				EF4B8BC324118665003AB263 /* Helper */,
 				EF4B8BBE24117E7A003AB263 /* ServiceLayer */,
 				EF4B8BA824117BEF003AB263 /* Networking */,
@@ -390,6 +395,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EF4B8BF52414F941003AB263 /* DataBaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */,
+				EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */,
+			);
+			path = DataBaseManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,6 +540,7 @@
 				EF4B8BE024118666003AB263 /* Utility.swift in Sources */,
 				EF4B8BDA24118665003AB263 /* UILabel+Extension.swift in Sources */,
 				EF4B8BD924118665003AB263 /* UIColor+Extension.swift in Sources */,
+				EF4B8BF72414F96C003AB263 /* CoreDataStack.swift in Sources */,
 				EF4B8BD624118665003AB263 /* ReusableTableViewCell.swift in Sources */,
 				EF4B8BE824118D3F003AB263 /* UsersCell.swift in Sources */,
 				EF4B8BDC24118666003AB263 /* UIImage+Extension.swift in Sources */,
@@ -537,6 +552,7 @@
 				EF4B8BB624117BEF003AB263 /* ParameterEncoding.swift in Sources */,
 				EF4B8B7A2411745E003AB263 /* ClassPlus.xcdatamodeld in Sources */,
 				EF4B8BB924117BEF003AB263 /* HTTPTask.swift in Sources */,
+				EF4B8BF92414FA79003AB263 /* UsersDatabaseManager.swift in Sources */,
 				EF4B8BF32411A55C003AB263 /* AddUserCell.swift in Sources */,
 				EF4B8BE424118888003AB263 /* UsersListViewModel.swift in Sources */,
 				EF4B8BDE24118666003AB263 /* WKWebView+Extension.swift in Sources */,

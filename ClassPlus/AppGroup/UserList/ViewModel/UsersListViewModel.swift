@@ -50,6 +50,18 @@ class UsersListViewModel  {
         }
     }
     
+    func addUserToTop(user: User) {
+        self.usersArray?.insert(user, at: 0)
+    }
+    
+    func updateUser(on index: Int, user: User) {
+        self.usersArray?[index] = user
+    }
+    
+    func removeUser(from index: Int) {
+        self.usersArray?.remove(at: index)
+    }
+    
     func getNumberOfRows() -> Int {
         return self.usersArray?.count ?? 0
     }

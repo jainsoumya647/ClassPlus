@@ -12,7 +12,7 @@ class UsersListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: UsersListViewModel!
+    private var viewModel: UsersListViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +43,15 @@ class UsersListViewController: UIViewController {
     }
     
     @IBAction func addAction(_ sender: Any) {
-        if let vc = AddUserViewController.getController(user: nil) {
+        self.gotoAddUserVC(user: nil, index: nil)
+    }
+    
+    private func gotoAddUserVC(user: User?, index: Int?) {
+        if let vc = AddUserViewController.getController(user: user, index: index) {
+            vc.delegate = self
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
 }
 
 extension UsersListViewController: UITableViewDataSource {
@@ -74,22 +78,35 @@ extension UsersListViewController: UITableViewDelegate {
 
 extension UsersListViewController: UsersCellDelegate {
     func moreAction(on index: Int) {
-        self.presentActionSheet()
+        self.presentActionSheet(for: index)
     }
     
-    func presentActionSheet() {
+    func presentActionSheet(for index: Int) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let updateAction = UIAlertAction(title: "Update User", style: .default, handler: { (alert: UIAlertAction!) -> Void in
-            
+            self.gotoAddUserVC(user: self.viewModel.getUser(onIndex: index), index: index)
         })
 
         let deleteAction = UIAlertAction(title: "Delete User", style: .destructive, handler: { (alert: UIAlertAction!) -> Void in
-            
+            self.viewModel.removeUser(from: index)
         })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         alertController.addAction(updateAction)
         alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+extension UsersListViewController: AddUserVCDelegate {
+    func updateUser(on index: Int, user: User) {
+        self.viewModel.updateUser(on: index, user: user)
+    }
+    
+    func addUser(user: User) {
+        self.viewModel.addUserToTop(user: user)
     }
 }

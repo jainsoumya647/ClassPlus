@@ -10,15 +10,23 @@ import Foundation
 
 class AddUserViewModel {
     private var user: User
+    var isNewUser: Bool
+    var index: Int
     private var sections: [Sections]
     var updateSaveButton: ((_ isEnabled: Bool) -> Void)?
-    init(user: User) {
+    init(user: User, isNewUser: Bool, index: Int) {
         self.user = user
         self.sections = [.firstName, .lastName, .email, .phone]
+        self.isNewUser = isNewUser
+        self.index = index
     }
 
     func getNumberOfRows() -> Int {
         return self.sections.count
+    }
+    
+    func getUserObject() -> User {
+        return self.user
     }
 
     func updateText(for section: Sections, text: String) {

@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J9L-LS-1BP">
-                        <rect key="frame" x="120" y="38" width="210" height="44"/>
+                        <rect key="frame" x="120" y="26" width="210" height="68.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9G-Mm-TKJ">
                                 <rect key="frame" x="0.0" y="0.0" width="210" height="19.5"/>
@@ -34,6 +34,12 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MC7-9o-HiD">
                                 <rect key="frame" x="0.0" y="29.5" width="210" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpj-dK-XVj">
+                                <rect key="frame" x="0.0" y="54" width="210" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,6 +70,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="emailLabel" destination="MC7-9o-HiD" id="fL3-Lf-dHm"/>
+                <outlet property="mobileNumberLabel" destination="Bpj-dK-XVj" id="lJe-yd-nmZ"/>
                 <outlet property="moreButton" destination="HBO-te-afm" id="OTW-In-qgv"/>
                 <outlet property="nameLabel" destination="W9G-Mm-TKJ" id="zXO-PE-v4I"/>
                 <outlet property="profileImageView" destination="WMA-J4-p2o" id="9vT-ay-qMY"/>

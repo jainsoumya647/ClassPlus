@@ -18,6 +18,7 @@ class UsersCell: ReusableTableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var moreButton: UIButton!
+    @IBOutlet weak var mobileNumberLabel: UILabel!
     
     weak var delegate:UsersCellDelegate?
     
@@ -31,6 +32,9 @@ class UsersCell: ReusableTableViewCell {
         self.nameLabel.text = user.getFullName()
         self.emailLabel.text = user.email
         self.moreButton.tag = index
+        let mobileNumber = user.getMobile()
+        self.mobileNumberLabel.text = mobileNumber
+        self.mobileNumberLabel.isHidden = mobileNumber.isEmpty
     }
     
     @IBAction func moreButtonAction(_ sender: UIButton) {
