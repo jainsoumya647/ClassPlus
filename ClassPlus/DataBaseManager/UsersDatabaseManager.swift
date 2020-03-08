@@ -9,45 +9,29 @@
 import Foundation
 import UIKit
 
-//class DataBaseManger: NSObject {
-//    
-//    class func saveCarsToDb(_ completionBlock : @escaping ()->()) {
-//        ServiceManager.loadCars { (response, error) in
-//            if response != nil {
-//                //TODO - Out of the scope - Use background context to improve performance
-//                let context = CoreDataStack.persistentContainer.viewContext
-//                for dictionary in response! {
-//                    let car = Car(context:context)
-//                    car.parseWith(response: dictionary as! [String : Any])
-//                }
-//                //TODO - Out of the scope - implement caching logic based on requiremnt
-//                CoreDataStack.saveContext()
-//                completionBlock()
-//            }else{
-//                // Do nothing -  no error, response is empty
-//            }
-//            if error != nil {
-//                //Show error
-//            }
-//        }
-//    }
-//    
-//   class func loadCarsFromDb() -> [CarInfoViewModel] {
-//        let context = CoreDataStack.persistentContainer.viewContext
-//        var viewModelArray = [CarInfoViewModel]()
-//        do {
-//            let cars : [Car] = try context.fetch(Car.fetchRequest())
-//            if cars.count > 0{
-//                for car in cars{
-//                    let viewModel = CarInfoViewModel(data: car)
-//                    viewModelArray.append(viewModel!)
-//                }
-//            }
-//        }catch {
-//            print("Error fetching data from CoreData")
-//        }
-//        return viewModelArray
-//    }
-//    
-//    //Add other methods when needed
-//}
+class DataBaseManger: NSObject {
+    
+    class func saveUsersToDb(users: [User], _ completionBlock : @escaping ()->()) {
+        let context = CoreDataStack.persistentContainer.viewContext
+        for user in users {
+            user.saveUser(with: context)
+        }
+        //TODO - Out of the scope - implement caching logic based on requiremnt
+        CoreDataStack.saveContext()
+        completionBlock()
+    }
+    
+   class func loadCarsFromDb() -> [User] {
+        let context = CoreDataStack.persistentContainer.viewContext
+        var viewModelArray = [User]()
+        do {
+            let cars : [User] = try context.fetch(User.fetchUserRequest())
+            viewModelArray = cars
+        } catch {
+            print("Error fetching data from CoreData")
+        }
+        return viewModelArray
+    }
+//
+    //Add other methods when needed
+}

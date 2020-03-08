@@ -43,10 +43,16 @@ class UsersListViewModel  {
             self.isRequestInProgress = false
             self.usersResult = usersResult
             if self.usersArray == nil {
+                if let usersArray = usersResult.users {
+                    DataBaseManger.saveUsersToDb(users: usersArray) {}
+                }
                 self.usersArray = usersResult.users
             } else if let usersArray = usersResult.users {
-                self.usersArray?.append(contentsOf: usersArray)
+                DataBaseManger.saveUsersToDb(users: usersArray) {
+                    self.usersArray?.append(contentsOf: usersArray)
+                }
             }
+            
         }
     }
     

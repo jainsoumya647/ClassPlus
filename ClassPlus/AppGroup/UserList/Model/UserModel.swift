@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct UserResults: Codable {
     var page: Int
@@ -19,7 +20,7 @@ struct UserResults: Codable {
     }
 }
 
-struct User: Codable {
+class User: NSManagedObject, Codable {
     var id: Int?
     var email: String?
     var firstName: String?
@@ -34,6 +35,29 @@ struct User: Codable {
         case lastName = "last_name"
         case avatar = "avatar"
         case mobile = "mobile"
+    }
+    
+//    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+//
+//    }
+    
+    
+    required init(from decoder: Decoder) throws {
+        super.init(context: CoreDataStack.persistentContainer.viewContext)
+    }
+    
+    func saveUser(with context: NSManagedObjectContext) {
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        newUser.setValue(self.email, forKey: "email")
+        newUser.setValue(self.firstName, forKey: "firstName")
+        newUser.setValue(self.lastName, forKey: "lastName")
+        newUser.setValue(self.avatar, forKey: "avatar")
+        newUser.setValue(self.mobile, forKey: "mobile")
+    }
+    
+    class func fetchUserRequest() -> NSFetchRequest<User> {
+        return NSFetchRequest<User>(entityName: "User")
     }
     
     func getImageURLString() -> String {
