@@ -18,36 +18,32 @@ class UsersListViewModel {
     }
     private var currentPage = 0
     private var isRequestInProgress = false
-    private let isFetchedFromDataBase: Bool
     
     init() {
-        UserDefaults.set(true, forKey: .doesNeedsToFetchNextPage)
+        if UserDefaults.bool(forKey: .doesNeedsToFetchNextPage) == nil {
+            UserDefaults.set(true, forKey: .doesNeedsToFetchNextPage)
+        }
+        
         let users = DataBaseManger.loadUsersFromDb()
         for user in users {
             print("user: \(user.email ?? "Unknown") => createdDate: \(user.createdDate)")
         }
         if users.count > 0 {
             print("Fetched from DB with count: \(users.count)")
-            self.isFetchedFromDataBase = true
             self.usersArray = users
         } else {
-            self.isFetchedFromDataBase = false
             self.fetchNextPageUsers()
         }
-        
     }
     
     func fetchNextPageUsers() {
-        
-        guard self.isFetchedFromDataBase == false else {
-            return
-        }
         
         guard self.isRequestInProgress == false else {
             return
         }
         
-        guard UserDefaults.bool(forKey: .doesNeedsToFetchNextPage) else {
+        if let doesNeedsToFetchNextPage = UserDefaults.bool(forKey: .doesNeedsToFetchNextPage),
+            doesNeedsToFetchNextPage == false {
             return
         }
         

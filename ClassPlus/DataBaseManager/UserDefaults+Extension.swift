@@ -25,11 +25,12 @@ extension BoolUserDefaultable where BoolDefaultKey.RawValue == String {
     static func set(_ value: Bool, forKey key: BoolDefaultKey) {
         let key = key.rawValue
         UserDefaults.standard.set(value, forKey: key)
+        UserDefaults.standard.synchronize()
     }
     
-    static func bool(forKey key: BoolDefaultKey) -> Bool {
+    static func bool(forKey key: BoolDefaultKey) -> Bool? {
         let key = key.rawValue
-        return UserDefaults.standard.bool(forKey: key)
+        return UserDefaults.standard.value(forKey: key) as? Bool
     }
     
 }
