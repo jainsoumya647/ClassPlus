@@ -21,7 +21,11 @@ class UsersListViewModel {
     private let isFetchedFromDataBase: Bool
     
     init() {
+        UserDefaults.set(true, forKey: .doesNeedsToFetchNextPage)
         let users = DataBaseManger.loadUsersFromDb()
+        for user in users {
+            print("user: \(user.email ?? "Unknown") => createdDate: \(user.createdDate)")
+        }
         if users.count > 0 {
             print("Fetched from DB with count: \(users.count)")
             self.isFetchedFromDataBase = true
@@ -30,6 +34,7 @@ class UsersListViewModel {
             self.isFetchedFromDataBase = false
             self.fetchNextPageUsers()
         }
+        
     }
     
     func fetchNextPageUsers() {
@@ -42,7 +47,7 @@ class UsersListViewModel {
             return
         }
         
-        guard self.usersResult == nil || self.usersResult!.totalPages > self.currentPage else {
+        guard UserDefaults.bool(forKey: .doesNeedsToFetchNextPage) else {
             return
         }
         
@@ -54,14 +59,22 @@ class UsersListViewModel {
         self.isRequestInProgress = true
         UserService().getRepositories(page: page) { (usersResult) in
             self.isRequestInProgress = false
-            self.usersResult = usersResult
+            let results = self.updateCreatedAt(usersResult: usersResult)
+            self.usersResult = results
+            UserDefaults.set(results.totalPages > self.currentPage, forKey: .doesNeedsToFetchNextPage)
             if self.usersArray == nil {
-                self.usersArray = usersResult.users
-            } else if let usersArray = usersResult.users {
+                self.usersArray = results.users
+            } else if let usersArray = results.users {
                 self.usersArray?.append(contentsOf: usersArray)
             }
-            
         }
+    }
+    
+    private func updateCreatedAt(usersResult: UserResults) -> UserResults {
+        for index in 0..<(usersResult.users?.count ?? 0) {
+            usersResult.users?[index].createdDate = Int64(Date().timeIntervalSince1970) - Int64(index+self.getNumberOfRows()+1)
+        }
+        return usersResult
     }
     
     func addUserToTop(user: User) {

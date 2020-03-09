@@ -24,12 +24,12 @@ class DataBaseManger: NSObject {
 //    
     class func loadUsersFromDb() -> [User] {
         let context = CoreDataStack.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(User.createdDate), ascending: false)
+        fetchRequest.sortDescriptors = [sort]
         var viewModelArray = [User]()
         do {
-            let userFromDB : [User] = try context.fetch(User.fetchRequest())
-//            for user in userFromDB {
-//                viewModelArray.append(User(userDB: user))
-//            }
+            let userFromDB : [User] = try context.fetch(fetchRequest)
             viewModelArray = userFromDB
         } catch {
             print("Error fetching data from CoreData")

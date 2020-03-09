@@ -2,14 +2,14 @@
 //  User+CoreDataProperties.swift
 //  ClassPlus
 //
-//  Created by Soumya Jain on 08/03/20.
+//  Created by Soumya Jain on 09/03/20.
 //  Copyright © 2020 Soumya Jain. All rights reserved.
 //
 //
 
 import Foundation
 import CoreData
-
+import UIKit
 
 extension User {
 
@@ -22,6 +22,7 @@ extension User {
     @NSManaged public var lastName: String?
     @NSManaged public var avatar: String?
     @NSManaged public var mobile: String?
+    @NSManaged public var createdDate: Int64
 
     
     func getImageURLString() -> String {

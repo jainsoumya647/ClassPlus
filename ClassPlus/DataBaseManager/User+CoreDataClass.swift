@@ -20,6 +20,7 @@ public class User: NSManagedObject, Codable {
         case lastName = "last_name"
         case avatar = "avatar"
         case mobile = "mobile"
+        case createdDate = "createdDate"
     }
     
     public func encode(to encoder: Encoder) throws {
@@ -29,6 +30,7 @@ public class User: NSManagedObject, Codable {
         try values.encode(self.firstName, forKey: .firstName)
         try values.encode(self.lastName, forKey: .lastName)
         try values.encode(self.mobile, forKey: .mobile)
+        try values.encode(self.createdDate, forKey: .createdDate)
     }
     
     convenience init() {
@@ -37,6 +39,7 @@ public class User: NSManagedObject, Codable {
             fatalError("Entity not found")
         }
         self.init(entity: entity, insertInto: nil)
+        self.createdDate = Int64(Date().timeIntervalSince1970)
     }
     
     required convenience public init(from decoder: Decoder) throws {
@@ -52,6 +55,7 @@ public class User: NSManagedObject, Codable {
             self.lastName = try? values.decode(String?.self, forKey: .lastName)
             self.avatar = try? values.decode(String?.self, forKey: .avatar)
             self.mobile = try? values.decode(String?.self, forKey: .mobile)
+            self.createdDate = (try? values.decode(Int64?.self, forKey: .createdDate)) ?? Int64(Date().timeIntervalSince1970)
         } catch {
             print("Failed to load")
         }
@@ -66,6 +70,7 @@ public class User: NSManagedObject, Codable {
         newUser.setValue(self.lastName, forKey: "lastName")
         newUser.setValue(self.avatar, forKey: "avatar")
         newUser.setValue(self.mobile, forKey: "mobile")
+        newUser.setValue(self.createdDate, forKey: "createdDate")
     }
     
     func deleteUserFromDatabase() {

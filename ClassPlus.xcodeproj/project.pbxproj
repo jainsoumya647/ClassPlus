@@ -15,7 +15,6 @@
 		EF4B8B7A2411745E003AB263 /* ClassPlus.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B782411745E003AB263 /* ClassPlus.xcdatamodeld */; };
 		EF4B8B7C24117462003AB263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8B7B24117462003AB263 /* Assets.xcassets */; };
 		EF4B8B7F24117462003AB263 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4B8B7D24117462003AB263 /* LaunchScreen.storyboard */; };
-		EF4B8B8A24117463003AB263 /* ClassPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B8924117463003AB263 /* ClassPlusTests.swift */; };
 		EF4B8B9524117463003AB263 /* ClassPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8B9424117463003AB263 /* ClassPlusUITests.swift */; };
 		EF4B8BB524117BEF003AB263 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BA924117BEF003AB263 /* Environment.swift */; };
 		EF4B8BB624117BEF003AB263 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BAB24117BEF003AB263 /* ParameterEncoding.swift */; };
@@ -53,6 +52,9 @@
 		EF4B8BF92414FA79003AB263 /* UsersDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */; };
 		EFE493F0241546CA00A8B860 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493EE241546CA00A8B860 /* User+CoreDataClass.swift */; };
 		EFE493F1241546CA00A8B860 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493EF241546CA00A8B860 /* User+CoreDataProperties.swift */; };
+		EFE493F42416225300A8B860 /* UserListUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493F32416225300A8B860 /* UserListUnitTests.swift */; };
+		EFE493F72416427C00A8B860 /* AddUserUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493F62416427C00A8B860 /* AddUserUnitTests.swift */; };
+		EFE493F924165F3700A8B860 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE493F824165F3700A8B860 /* UserDefaults+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +86,6 @@
 		EF4B8B7E24117462003AB263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF4B8B8024117462003AB263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4B8B8524117463003AB263 /* ClassPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF4B8B8924117463003AB263 /* ClassPlusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPlusTests.swift; sourceTree = "<group>"; };
 		EF4B8B8B24117463003AB263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF4B8B9024117463003AB263 /* ClassPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4B8B9424117463003AB263 /* ClassPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPlusUITests.swift; sourceTree = "<group>"; };
@@ -125,6 +126,9 @@
 		EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDatabaseManager.swift; sourceTree = "<group>"; };
 		EFE493EE241546CA00A8B860 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EFE493EF241546CA00A8B860 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EFE493F32416225300A8B860 /* UserListUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUnitTests.swift; sourceTree = "<group>"; };
+		EFE493F62416427C00A8B860 /* AddUserUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserUnitTests.swift; sourceTree = "<group>"; };
+		EFE493F824165F3700A8B860 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +205,8 @@
 		EF4B8B8824117463003AB263 /* ClassPlusTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF4B8B8924117463003AB263 /* ClassPlusTests.swift */,
+				EFE493F52416409A00A8B860 /* AddUserTests */,
+				EFE493F22416218A00A8B860 /* UserListTests */,
 				EF4B8B8B24117463003AB263 /* Info.plist */,
 			);
 			path = ClassPlusTests;
@@ -406,8 +411,25 @@
 				EFE493EF241546CA00A8B860 /* User+CoreDataProperties.swift */,
 				EF4B8BF62414F96C003AB263 /* CoreDataStack.swift */,
 				EF4B8BF82414FA79003AB263 /* UsersDatabaseManager.swift */,
+				EFE493F824165F3700A8B860 /* UserDefaults+Extension.swift */,
 			);
 			path = DataBaseManager;
+			sourceTree = "<group>";
+		};
+		EFE493F22416218A00A8B860 /* UserListTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFE493F32416225300A8B860 /* UserListUnitTests.swift */,
+			);
+			path = UserListTests;
+			sourceTree = "<group>";
+		};
+		EFE493F52416409A00A8B860 /* AddUserTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFE493F62416427C00A8B860 /* AddUserUnitTests.swift */,
+			);
+			path = AddUserTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -581,6 +603,7 @@
 				EF4B8BB524117BEF003AB263 /* Environment.swift in Sources */,
 				EF4B8BEF2411A4C4003AB263 /* AddUserViewController.swift in Sources */,
 				EF4B8BD824118665003AB263 /* UIApplication+Extension.swift in Sources */,
+				EFE493F924165F3700A8B860 /* UserDefaults+Extension.swift in Sources */,
 				EF4B8BD524118665003AB263 /* ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +612,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4B8B8A24117463003AB263 /* ClassPlusTests.swift in Sources */,
+				EFE493F72416427C00A8B860 /* AddUserUnitTests.swift in Sources */,
+				EFE493F42416225300A8B860 /* UserListUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
